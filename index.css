@@ -1,0 +1,17 @@
+#leftpane{
+  padding: 20px;
+  float: left;
+  width: 40%;
+  background-color: rgb(235, 230, 230);
+}
+#rightpane{
+  padding-top: 60px;
+  float: left;
+  width: 50%;
+}
+#ta{
+  border:0px;
+  font-size:45px;
+  height: 65%;
+  width:80%;
+}
