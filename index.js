@@ -1,5 +1,5 @@
 let j=localStorage.length+1;
-let para,x,del,edit,inp;
+let para,x,del,edit,inp,hr;
 let storeValue;
 
 //For Add Task from local storage to left pane
@@ -10,6 +10,7 @@ for(let k =1;k<j;k++){
   x = document.createElement("INPUT");
   del = document.createElement('button');
   edit = document.createElement('button');
+  hr = document.createElement("HR");
   edit.setAttribute('class','fa fa-edit');
   del.setAttribute('class','fa fa-close');
   del.style.color = 'black';
@@ -37,6 +38,7 @@ for(let k =1;k<j;k++){
   para.appendChild(x);
   para.appendChild(edit);
   para.appendChild(del);
+  para.appendChild(hr);
   let element = document.getElementById("leftpane");
   element.appendChild(para);
 
@@ -60,6 +62,7 @@ for(let k =1;k<j;k++){
     inp.addEventListener("keypress",function(event){
       if(event.key==="Enter"){
         inptext.firstChild.nodeValue = inp.value;
+        this.parentElement.style.textDecoration = 'none';
       }
     })
 
@@ -92,6 +95,7 @@ ta.addEventListener("keypress",function(event){
     let x = document.createElement("INPUT");
     let del = document.createElement('button');
     edit = document.createElement('button');
+    hr = document.createElement("HR");
     edit.setAttribute('class','fa fa-edit');
     del.setAttribute('class','fa fa-close');
     del.style.color = 'black';
@@ -119,6 +123,7 @@ ta.addEventListener("keypress",function(event){
       para.appendChild(x);
       para.appendChild(edit);
       para.appendChild(del);
+      para.appendChild(hr);
       let element = document.getElementById("leftpane");
       element.appendChild(para);
       
